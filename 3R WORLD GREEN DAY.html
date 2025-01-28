@@ -12,17 +12,10 @@
         }
 
         /* Background image */
-        #bg-image {
-            position: absolute;
-            top: 2in; /* Moves the background image 2 inches down from the top */
-            left: 50%;
-            width: 100%;
-            height: calc(100% - 2in); /* Adjust height considering the 2-inch offset */
-            background-image: url('BACKGROUND FRAME/your-image.jpg'); /* Replace with your image file */
+        body {
+            background: url('BACKGROUND FRAME.jpg') no-repeat center center fixed; /* Update with your image path */
             background-size: cover;
-            background-position: center;
-            transform: translateX(-50%); /* Center horizontally */
-            z-index: -1;
+            margin-top: 2in; /* Moves the content 2 inches down from the top */
         }
 
         header {
@@ -69,9 +62,6 @@
     </style>
 </head>
 <body>
-
-    <!-- Background Image -->
-    <div id="bg-image"></div>
 
     <header>
         <h1>3R WORLD GREEN DAY</h1>
