@@ -1,28 +1,49 @@
 <!DOCTYPE html>
-<!-- saved from url=(0076)file:///C:/Users/lenovo/OneDrive/Desktop/WEBSITE%20OBM255/3R%20FRAMESET.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
     <title>3R WORLD GREEN DAY</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        body, html {
             margin: 0;
             padding: 0;
+            height: 100%;
+            overflow: hidden;
         }
+
+        /* Background image */
+        #bg-image {
+            position: absolute;
+            top: 2in; /* Moves the background image 2 inches down from the top */
+            left: 50%;
+            width: 100%;
+            height: calc(100% - 2in); /* Adjust height considering the 2-inch offset */
+            background-image: url('BACKGROUND FRAME/your-image.jpg'); /* Replace with your image file */
+            background-size: cover;
+            background-position: center;
+            transform: translateX(-50%); /* Center horizontally */
+            z-index: -1;
+        }
+
         header {
-            background-color: green;
+            background-color: rgba(0, 128, 0, 0.7); /* Green with transparency */
             color: white;
             text-align: center;
             padding: 20px;
+            position: relative;
+            z-index: 1;
         }
+
+        h2 {
+            margin-top: 10px;
+        }
+
         nav {
             text-align: center;
             margin: 20px;
+            z-index: 1;
         }
-        iframe {
-            width: 100%;
-            height: 80vh;
-            border: none;
-        }
+
         button {
             padding: 10px 20px;
             margin: 5px;
@@ -32,27 +53,43 @@
             color: white;
             border-radius: 5px;
         }
+
         button:hover {
             background-color: darkgreen;
+        }
+
+        iframe {
+            width: 100%;
+            height: calc(100vh - 140px); /* Adjust for header + nav height */
+            border: none;
+            z-index: 1;
+            margin: 0;
+            padding: 0;
         }
     </style>
 </head>
 <body>
+
+    <!-- Background Image -->
+    <div id="bg-image"></div>
+
     <header>
         <h1>3R WORLD GREEN DAY</h1>
+        <h2>FEEL FREE TO BROWSE OUR WEBSITE!</h2>
     </header>
+    
     <nav>
-        <button onclick="loadPage(&#39;FRONTPAGE.html&#39;)">Front Page</button>
-        <button onclick="loadPage(&#39;DIRECTION.html&#39;)">Directions</button>
-        <button onclick="loadPage(&#39;PRICING.html&#39;)">Pricing</button>
-        <button onclick="loadPage(&#39;LINKSPAGE.html&#39;)">Links</button>
+        <button onclick="loadPage('FRONTPAGE.html')">Front Page</button>
+        <button onclick="loadPage('DIRECTION.html')">Directions</button>
+        <button onclick="loadPage('PRICING.html')">Pricing</button>
+        <button onclick="loadPage('LINKSPAGE.html')">Links</button>
     </nav>
-    <iframe id="contentFrame" src="./3R WORLD GREEN DAY_files/LINKSPAGE.html"></iframe>
 
     <script>
         function loadPage(page) {
-            document.getElementById('contentFrame').src = page;
+            window.location.href = page;
         }
     </script>
 
-</body></html>
+</body>
+</html>
